@@ -1,0 +1,301 @@
+:root {
+  /* Color */
+  --white-color: #ffffff;
+  --black-color: #181818;
+  --blue-color: #3da6ff;
+  --red-color: #cc2101;
+  --dark-grey-color: #aaaaaa;
+  --light-grey-color: #303030;
+
+  /* Size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--black-color);
+}
+
+body {
+  color: var(--white-color);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+/* 
+
+
+
+
+
+*/
+/* ----------- Header ----------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  font-size: var(--font-large);
+}
+
+header #youtube_logo {
+  color: red;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  list-style: none;
+  padding: var(--padding);
+}
+
+/* 
+
+
+
+
+
+*/
+
+/* ----------- Video Player----------- */
+
+.player {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  text-align: center;
+}
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+}
+
+/* 
+
+
+
+
+
+*/
+
+/* ----------- Info ----------- */
+
+.infoAndUpnext > .info {
+  padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+  display: flex;
+  font-size: var(--font-small);
+}
+
+.info .metadata .hashtags li {
+  color: var(--blue-color);
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.info > .metadata > .titleAndButton {
+  display: flex;
+}
+
+.info > .metadata > .titleAndButton > .title {
+  font-size: var(--font-large);
+  margin-right: var(--padding);
+}
+
+.info > .metadata > .titleAndButton > .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  align-self: flex-start;
+  color: var(--dark-grey-color);
+}
+
+.info .metadata .titleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.info .metadata .views {
+  font-size: var(--font-medium);
+  margin-top: 4px;
+  color: var(--dark-grey-color);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--padding) 0;
+}
+
+.actions button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--dark-grey-color);
+}
+
+.actions button i {
+  padding-bottom: calc(var(--padding) / 2);
+}
+
+.actions button .active {
+  color: var(--blue-color);
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.3px solid var(--light-grey-color);
+  border-bottom: 1px solid var(--light-grey-color);
+}
+
+.channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.channel .info {
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.channel .name {
+  font-size: var(--font-medium);
+}
+
+.channel .info .subscribers {
+  color: var(--dark-grey-color);
+  font-size: var(--font-small);
+}
+
+.channel .subscribe {
+  color: var(--dark-grey-color);
+  text-transform: uppercase;
+}
+
+/* 
+
+
+
+
+
+*/
+
+/* ----------- UpNext ----------- */
+
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext > .title {
+  font-size: var(--font-medium);
+  color: var(--dark-grey-color);
+  display: inline-block;
+  margin-bottom: var(--padding);
+}
+
+.upNext .item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--padding);
+}
+
+.upNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.upNext .item img {
+  width: 100%;
+}
+
+.upNext .item .info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-medium);
+}
+
+.upNext .item .info .title {
+  margin-top: 0;
+}
+
+.upNext .item .info .name,
+.views {
+  color: var(--dark-grey-color);
+  font-size: var(--font-small);
+}
+
+.upNext .item .info .name {
+  margin-top: calc(var(--padding) / 2);
+}
+
+.upNext .item .moreBtn {
+  flex: 1 1 5%;
+  color: var(--dark-grey-color);
+  align-self: center;
+}
+
+.infoAndUpnext {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+
+
+
+
+*/
+/* ------------Media Query----------- */
+
+@media screen and (min-width: 1000px) {
+  .infoAndUpnext {
+    flex-direction: row;
+    margin: clac(var(--padding) / 2);
+  }
+
+  .infoAndUpnext > .upNext {
+    flex: 40%;
+  }
+
+  .infoAndUpnext > .upNext .title {
+    margin-top: var(--padding);
+  }
+
+  .infoAndUpnext > .info {
+    flex: 60%;
+  }
+}

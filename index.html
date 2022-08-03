@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a58ddabc0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>thgee</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i id="youtube_logo" class="fa-brands fa-youtube"></i>
+        <span class="title">Youtube</span>
+      </div>
+      <ul class="icons">
+        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+      </ul>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player">
+      <video controls>
+        <source src="img\video1.mp4" type="video/webm" />
+        <source src="img\video1.mp4" type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </section>
+
+    <div class="infoAndUpnext">
+      <!-- Info -->
+      <section class="info">
+        <!-- MetaData -->
+        <div class="metadata">
+          <ul class="hashtags">
+            <li>#졸려</li>
+            <li>#공부하기싫어</li>
+            <li>#배고파</li>
+          </ul>
+          <div class="titleAndButton">
+            <span class="title clamp">
+              존윅 뺨치는 전설의 킬러가 은퇴 후 조용히 설거지하며 살고 있는데,
+              세상에서 제일 무서운 내 와이프가 시킨 심부름을 방해한
+              조직폭력배들에게 벌어진 일
+            </span>
+            <button class="moreBtn clicked">
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+          <div class="views">
+            <span class="views">조회수 12,712회 · 2022. 6. 22.</span>
+          </div>
+        </div>
+
+        <!-- Action -->
+        <ul class="actions">
+          <li>
+            <button>
+              <i class="active fas fa-thumbs-up"></i><span>1K</span>
+            </button>
+          </li>
+          <li>
+            <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-share"></i><span>Share</span></button>
+          </li>
+          <li>
+            <button><i class="fas fa-plus"></i><span>Save</span></button>
+          </li>
+          <li>
+            <button>
+              <i class="fab fa-font-awesome-flag"></i><span>Report</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Channel -->
+        <div class="channel">
+          <div class="metadata">
+            <img src="img\cat.png" alt="" />
+            <div class="info">
+              <span class="name">THGEE</span>
+              <span class="subscribers">구독자 602.3만명</span>
+            </div>
+          </div>
+          <button class="subscribe">subscribe</button>
+        </div>
+      </section>
+
+      <!-- UpNext -->
+      <section class="upNext">
+        <span class="title">Up next</span>
+        <ul>
+          <li class="item">
+            <div class="img">
+              <img src="img/img1.png" alt="" />
+            </div>
+            <div class="info">
+              <span class="title"
+                >새끼고양이 입양 첫날 브이로그 (vlog), 집사와 새끼고양이
+                두마리의 첫 만남</span
+              >
+              <span class="name">THGEE</span>
+              <span class="views">조회수 627만회 · 2개월 전</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </li>
+          <li class="item">
+            <div class="img">
+              <img src="img/img2.png" alt="" />
+            </div>
+            <div class="info">
+              <span class="title"
+                >불법 취업했다고 블라인드 게시판에 익명 고발하고 괴롭히는 권민우
+                참교육하는 천재 변호사 우영우《이상한 변호사 우영우 8화》</span
+              >
+              <span class="name">THGEE</span>
+              <span class="views">조회수 4807만회 · 1년 전</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </li>
+          <li class="item">
+            <div class="img">
+              <img src="img/img3.png" alt="" />
+            </div>
+            <div class="info">
+              <span class="title"
+                >투명한 음색과 발랄함이 돋보이는 조유리(JO YURI)의♬ 'GLASSY' |
+                비긴어게인 오픈마이크</span
+              >
+              <span class="name">THGEE</span>
+              <span class="views">조회수 127만회 · 4년 전</span>
+            </div>
+            <button class="moreBtn">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
