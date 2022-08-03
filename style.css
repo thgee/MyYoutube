@@ -83,6 +83,7 @@ header li {
   top: 0;
   background-color: black;
   text-align: center;
+  z-index: 1;
 }
 .player video {
   width: 100%;
