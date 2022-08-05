@@ -1,3 +1,7 @@
+<!-- 다크모드 버튼 클릭 시 body 태그의 backgroundColor를 -->
+<!-- 바꿔도 자식태그들의 backgroundColor 속성 때문에 적용이 안된다. -->
+<!-- 자식태그를 하나하나 select 해서 color를 전부 바꿔야 하나? -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,6 +31,9 @@
         <span class="title">Youtube</span>
       </div>
       <ul class="icons">
+        <li>
+          <button class="dayNightBtn" value="night">다크모드</button>
+        </li>
         <li><i class="fa-solid fa-magnifying-glass"></i></li>
         <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
       </ul>

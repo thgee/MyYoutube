@@ -61,6 +61,16 @@ header #youtube_logo {
 
 header ul {
   display: flex;
+  align-items: center;
+}
+
+header ul .dayNightBtn {
+  padding: 8px;
+  margin-right: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #444857;
+  color: var(--white-color);
 }
 
 header li {
