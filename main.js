@@ -1,22 +1,33 @@
+const root = document.querySelector(":root");
 const moreBtn = document.querySelector(".info .metadata .moreBtn");
 const title = document.querySelector(".info .metadata .title");
 const dayNightBtn = document.querySelector(".dayNightBtn");
-const body = document.querySelector("body");
-const text = document.querySelectorAll("span");
+
+function getCssValiable(valiable_name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(
+    valiable_name
+  );
+}
+
+let Color = {
+  background_color: getCssValiable("--background-color"),
+  text_color: getCssValiable("--text-color"),
+  dark_grey_color: getCssValiable("--dark-grey-color"),
+  blue_color: getCssValiable("--blue-color"),
+};
 
 function dayNightHandler(self) {
-  if (self.value === "night") {
-    body.style.color = "red";
-    self.value = "day";
-    for (let i = 0; i < text.length; i++) {
-      text[i].style.color = "green";
-    }
+  if (self.value) {
+    // css의 :root 안에 있는 변수값 변경
+    root.style.setProperty("--background-color", "white");
+    root.style.setProperty("--text-color", "black");
+    root.style.setProperty("--dark-grey-color", "black");
+    document.querySelector("body").style.fontWeight = "bold";
   } else {
-    body.style.color = "white";
-    self.value = "night";
-    for (let i = 0; i < text.length; i++) {
-      text[i].style.color = "white";
-    }
+    root.style.setProperty("--background-color", Color.background_color);
+    root.style.setProperty("--text-color", Color.text_color);
+    root.style.setProperty("--dark-grey-color", Color.dark_grey_color);
+    document.querySelector("body").style.fontWeight = "normal";
   }
 }
 
@@ -26,5 +37,6 @@ moreBtn.addEventListener("click", () => {
 });
 
 dayNightBtn.addEventListener("click", function () {
-  dayNightHandler(this);
+  dayNightBtn.classList.toggle("clicked");
+  dayNightHandler(document.querySelector(".clicked"));
 });

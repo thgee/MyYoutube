@@ -1,11 +1,11 @@
 :root {
   /* Color */
-  --white-color: #ffffff;
-  --black-color: #181818;
+  --text-color: #ffffff;
+  --background-color: #181818;
   --blue-color: #3da6ff;
   --red-color: #cc2101;
   --dark-grey-color: #aaaaaa;
-  --light-grey-color: #303030;
+  --border-line-color: #303030;
 
   /* Size */
   --padding: 12px;
@@ -23,11 +23,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  background-color: var(--black-color);
-}
-
-body {
-  color: var(--white-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 ul {
@@ -70,7 +67,7 @@ header ul .dayNightBtn {
   font-weight: bold;
   border-radius: 12px;
   background-color: #444857;
-  color: var(--white-color);
+  color: white;
 }
 
 header li {
@@ -167,11 +164,14 @@ header li {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: var(--dark-grey-color);
 }
 
 .actions button i {
   padding-bottom: calc(var(--padding) / 2);
+}
+
+.actions button * {
+  color: var(--dark-grey-color);
 }
 
 .actions button .active {
@@ -181,8 +181,8 @@ header li {
 .channel {
   display: flex;
   justify-content: space-between;
-  border-top: 0.3px solid var(--light-grey-color);
-  border-bottom: 1px solid var(--light-grey-color);
+  border-top: 0.3px solid var(--border-line-color);
+  border-bottom: 1px solid var(--border-line-color);
 }
 
 .channel .metadata {
